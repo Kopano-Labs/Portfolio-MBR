@@ -305,11 +305,11 @@ export default function Hero() {
           {/* Email line */}
           <motion.p
             variants={fadeUp}
-            className="text-xs text-[#475569] font-mono"
+            className="text-xs text-[#475569] font-mono mt-4"
           >
             <motion.span
               whileHover={{ color: "#c9a84c" }}
-              className="cursor-default"
+              className="cursor-default overflow-hidden text-ellipsis"
             >
               mashrababalela@gmail.com
             </motion.span>
@@ -317,28 +317,26 @@ export default function Hero() {
         </motion.div>
       </motion.div>
 
-      {/* Scroll indicator */}
+      {/* Scroll indicator - hidden on small mobile screens to prevent overlap */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 2 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 text-[#475569] hover:text-[#c9a84c] transition-colors group"
+        className="absolute bottom-6 left-1/2 -translate-x-1/2 hidden sm:flex flex-col items-center gap-1 text-[#475569]/60 pointer-events-none"
       >
-        <a href="#about" className="flex flex-col items-center gap-1">
-          <motion.span
-            animate={{ opacity: [0.4, 1, 0.4] }}
-            transition={{ duration: 2, repeat: Infinity }}
-            className="text-[10px] font-mono tracking-widest"
-          >
-            SCROLL
-          </motion.span>
-          <motion.div
-            animate={{ y: [0, 8, 0] }}
-            transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-          >
-            <ArrowDown size={16} />
-          </motion.div>
-        </a>
+        <motion.span
+          animate={{ opacity: [0.4, 1, 0.4] }}
+          transition={{ duration: 2, repeat: Infinity }}
+          className="text-[10px] font-mono tracking-widest"
+        >
+          SCROLL
+        </motion.span>
+        <motion.div
+          animate={{ y: [0, 8, 0] }}
+          transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+        >
+          <ArrowDown size={14} />
+        </motion.div>
       </motion.div>
     </section>
   );
