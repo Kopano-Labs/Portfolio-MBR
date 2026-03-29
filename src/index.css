@@ -51,6 +51,14 @@ html {
   scroll-behavior: smooth;
 }
 
+section {
+  scroll-margin-top: 96px; /* Accounts for fixed navbar height */
+}
+
+#home {
+  scroll-margin-top: 0;
+}
+
 body {
   font-family: "Inter", system-ui, -apple-system, sans-serif;
   -webkit-font-smoothing: antialiased;
