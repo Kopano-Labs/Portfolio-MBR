@@ -233,7 +233,7 @@ export default function Hero() {
           {/* CTAs */}
           <motion.div
             variants={fadeUp}
-            className="flex flex-wrap justify-center lg:justify-start gap-4 mb-8"
+            className="flex flex-col sm:flex-row flex-wrap justify-center lg:justify-start gap-4 mb-8 w-full max-w-sm sm:max-w-none"
           >
             <motion.a
               href="#contact"
@@ -243,7 +243,7 @@ export default function Hero() {
                 y: -3,
               }}
               whileTap={{ scale: 0.95 }}
-              className="inline-flex items-center gap-2.5 px-8 py-3.5 rounded-2xl font-bold text-sm bg-gradient-to-r from-[#c9a84c] to-[#d4b96a] text-[#080b1a] shadow-lg shadow-[#c9a84c]/25 transition-all"
+              className="inline-flex items-center justify-center gap-2.5 px-8 py-3.5 rounded-2xl font-bold text-sm bg-gradient-to-r from-[#c9a84c] to-[#d4b96a] text-[#080b1a] shadow-lg shadow-[#c9a84c]/20 transition-all w-full sm:w-auto"
             >
               <motion.div animate={{ rotate: [0, 10, -10, 0] }} transition={{ duration: 2, repeat: Infinity }}>
                 <Mail size={16} />
@@ -262,7 +262,7 @@ export default function Hero() {
                 y: -3,
               }}
               whileTap={{ scale: 0.95 }}
-              className="inline-flex items-center gap-2.5 px-8 py-3.5 rounded-2xl font-bold text-sm border border-[#7c3aed]/50 text-[#a78bfa] transition-all"
+              className="inline-flex items-center justify-center gap-2.5 px-8 py-3.5 rounded-2xl font-bold text-sm border border-[#7c3aed]/50 text-[#a78bfa] transition-all w-full sm:w-auto"
             >
               <motion.div animate={{ y: [0, -3, 0] }} transition={{ duration: 1.5, repeat: Infinity }}>
                 <Linkedin size={16} />
@@ -281,7 +281,7 @@ export default function Hero() {
                 y: -3,
               }}
               whileTap={{ scale: 0.95 }}
-              className="inline-flex items-center gap-2.5 px-8 py-3.5 rounded-2xl font-bold text-sm border border-[#25D366]/50 text-[#25D366] transition-all"
+              className="inline-flex items-center justify-center gap-2.5 px-8 py-3.5 rounded-2xl font-bold text-sm border border-[#25D366]/50 text-[#25D366] transition-all w-full sm:w-auto"
             >
               <motion.div animate={{ scale: [1, 1.1, 1] }} transition={{ duration: 2, repeat: Infinity }}>
                 <svg
@@ -300,7 +300,6 @@ export default function Hero() {
               </motion.div>
               Connect on WhatsApp
             </motion.a>
-
           </motion.div>
 
           {/* Email line */}

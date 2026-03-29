@@ -49,10 +49,12 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 section {
   scroll-margin-top: 96px; /* Accounts for fixed navbar height */
+  overflow-x: hidden;
 }
 
 #home {
@@ -64,6 +66,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-x: hidden;
 }
 
 /* Dark mode (default) */
